@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'devise', '~> 3.5', '>= 3.5.4'
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 group :development, :test do
