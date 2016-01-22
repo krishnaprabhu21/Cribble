@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
 
 	def update
-		if @post.upate(post_params)
+		if @post.update(post_params)
 			redirect_to @post
 		else
 			render 'edit'
@@ -60,7 +60,7 @@ class PostsController < ApplicationController
 		end
 
 		def post_params
-			params.require(:post).permit(:title, :link, :description)
+			params.require(:post).permit(:title, :link, :description, :image)
 		end
 
 

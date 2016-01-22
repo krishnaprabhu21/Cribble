@@ -1,6 +1,7 @@
 <h1>Home Page</h1>
 
 <% @post.each do |post| %>
+	<%= link_to(image_tag post.image.url(:small)) %>
 	<h3><%= link_to post.title, post %></h3>
 <% end %>
 

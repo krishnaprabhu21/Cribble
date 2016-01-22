@@ -1,7 +1,9 @@
 
+<%= image_tag @post.image.url(:medium) %>
 <h1><%= @post.title %></h1>
 <p><%= @post.link %></p>
 <p><%= @post.description %></p>
+<p><%= @post.user.name %></p>
 
 
 <%= link_to "Home", root_path %>
