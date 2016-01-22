@@ -3,6 +3,7 @@
 <% @post.each do |post| %>
 	<%= link_to(image_tag post.image.url(:small)) %>
 	<h3><%= link_to post.title, post %></h3>
+	<p><%= pluralize(post.comments.count, "Comment") %> </p>
 <% end %>
 
 <%= link_to "Add new Cribble", new_post_path(@post) %>

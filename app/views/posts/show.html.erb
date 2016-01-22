@@ -5,6 +5,23 @@
 <p><%= @post.description %></p>
 <p><%= @post.user.name %></p>
 
+<div id="comment_container">
+	<h2 class="comment_count">
+		<%= pluralize(@post.comments.count, "Comment") %>
+	</h2>
+	<% @comments.each do |comment| %>
+		<div class="comment">
+			<p class="username">
+				<%= comment.user.name %>
+			</p>
+			<p class="content">
+				<%= comment.content %>
+			</p>
+		</div>
+	<% end %>
+</div>
+
+<%= render 'comments/form' %>
 
 <%= link_to "Home", root_path %>
 <%= link_to "Edit", edit_post_path(@post) %>
